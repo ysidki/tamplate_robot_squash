@@ -1,0 +1,3 @@
+pandas
+pyhive
+thrift

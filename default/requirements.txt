@@ -1,0 +1,7 @@
+pyyaml
+robotframework-pabot
+icdc-requests-with-system-ca
+pandas
+requests
+argparse
+click

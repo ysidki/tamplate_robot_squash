@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.2 on win32)" generated="20240919 16:25:26.195" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Local\TestAutomationAgent\libs\robotframework\templates\default\tests">
+<suite id="s1-s1" name="Web Functionality" source="C:\Local\TestAutomationAgent\libs\robotframework\templates\default\tests\web_functionality.robot">
+<test id="s1-s1-t1" name="Example Test" line="25">
+<kw name="fill login form" library="actions">
+<arg>user</arg>
+<arg>password</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username_field_locator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240919 16:25:26.796" level="INFO">Typing text 'user' into text field 'id=username'.</msg>
+<msg timestamp="20240919 16:25:26.796" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240919 16:25:26.796" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240919 16:25:26.796" endtime="20240919 16:25:26.796"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_field_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240919 16:25:26.811" endtime="20240919 16:25:26.813"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login_button_locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240919 16:25:26.813" endtime="20240919 16:25:26.813"/>
+</kw>
+<status status="FAIL" starttime="20240919 16:25:26.796" endtime="20240919 16:25:26.814"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20240919 16:25:26.815" endtime="20240919 16:25:26.817"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240919 16:25:26.820" endtime="20240919 16:25:26.820"/>
+</kw>
+<tag>656121</tag>
+<status status="FAIL" starttime="20240919 16:25:26.796" endtime="20240919 16:25:26.821">No browser is open.</status>
+</test>
+<test id="s1-s1-t2" name="Example Test 2" line="35">
+<if>
+<branch type="IF" condition="'${ENVIRONMENT}' == 'dev'">
+<kw name="Log" library="BuiltIn">
+<arg>Exécution dans l'environnement DEV</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240919 16:25:26.825" level="INFO">Exécution dans l'environnement DEV</msg>
+<status status="PASS" starttime="20240919 16:25:26.825" endtime="20240919 16:25:26.825"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${dev.base_url}</arg>
+<arg>${dev.browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240919 16:25:26.828" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<msg timestamp="20240919 16:25:28.270" level="WARN">There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache</msg>
+<msg timestamp="20240919 16:25:34.359" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240919 16:25:34.360" level="FAIL">WebDriverException: Message: unknown error: net::ERR_PROXY_CONNECTION_FAILED
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DAC99412+29090]
+	(No symbol) [0x00007FF6DAC0E239]
+	(No symbol) [0x00007FF6DAACB1DA]
+	(No symbol) [0x00007FF6DAAC3214]
+	(No symbol) [0x00007FF6DAAB4179]
+	(No symbol) [0x00007FF6DAAB5F42]
+	(No symbol) [0x00007FF6DAAB443F]
+	(No symbol) [0x00007FF6DAAB3CD1]
+	(No symbol) [0x00007FF6DAAB3C10]
+	(No symbol) [0x00007FF6DAAB1ACF]
+	(No symbol) [0x00007FF6DAAB214C]
+	(No symbol) [0x00007FF6DAACE241]
+	(No symbol) [0x00007FF6DAB673CE]
+	(No symbol) [0x00007FF6DAB466EA]
+	(No symbol) [0x00007FF6DAB665A2]
+	(No symbol) [0x00007FF6DAB46493]
+	(No symbol) [0x00007FF6DAB109D1]
+	(No symbol) [0x00007FF6DAB11B31]
+	GetHandleVerifier [0x00007FF6DAFB871D+3302573]
+	GetHandleVerifier [0x00007FF6DB004243+3612627]
+	GetHandleVerifier [0x00007FF6DAFFA417+3572135]
+	GetHandleVerifier [0x00007FF6DAD55EB6+801862]
+	(No symbol) [0x00007FF6DAC1945F]
+	(No symbol) [0x00007FF6DAC14FB4]
+	(No symbol) [0x00007FF6DAC15140]
+	(No symbol) [0x00007FF6DAC0461F]
+	BaseThreadInitThunk [0x00007FFDD763257D+29]
+	RtlUserThreadStart [0x00007FFDD834AF28+40]
+</msg>
+<status status="FAIL" starttime="20240919 16:25:26.826" endtime="20240919 16:25:34.365"/>
+</kw>
+<status status="FAIL" starttime="20240919 16:25:26.824" endtime="20240919 16:25:34.381"/>
+</branch>
+<branch type="ELSE IF" condition="'${ENVIRONMENT}' == 'staging'">
+<kw name="Log" library="BuiltIn">
+<arg>Exécution dans l'environnement STAGING</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240919 16:25:34.383" endtime="20240919 16:25:34.384"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${staging.base_url}</arg>
+<arg>${staging.browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20240919 16:25:34.386" endtime="20240919 16:25:34.389"/>
+</kw>
+<status status="NOT RUN" starttime="20240919 16:25:34.382" endtime="20240919 16:25:34.389"/>
+</branch>
+<branch type="ELSE IF" condition="'${ENVIRONMENT}' == 'prod'">
+<kw name="Log" library="BuiltIn">
+<arg>Exécution dans l'environnement PROD</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240919 16:25:34.392" endtime="20240919 16:25:34.392"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${prod.base_url}</arg>
+<arg>${prod.browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20240919 16:25:34.392" endtime="20240919 16:25:34.393"/>
+</kw>
+<status status="NOT RUN" starttime="20240919 16:25:34.390" endtime="20240919 16:25:34.393"/>
+</branch>
+<status status="FAIL" starttime="20240919 16:25:26.824" endtime="20240919 16:25:34.393"/>
+</if>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20240919 16:25:34.395" endtime="20240919 16:25:34.397"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240919 16:25:34.398" endtime="20240919 16:25:34.399"/>
+</kw>
+<status status="FAIL" starttime="20240919 16:25:26.823" endtime="20240919 16:25:34.407">WebDriverException: Message: unknown error: net::ERR_PROXY_CONNECTION_FAILED
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DAC99412+29090]
+	(No symbol) [0x00007FF6DAC0E239]
+	(No symbol) [0x00007FF6DAACB1DA]
+	(No symbol) [0x00007FF6DAAC3214]
+	(No symbol) [0x00007FF6DAAB4179]
+	(No symbol) [0x00007FF6DAAB5F42]
+	(No symbol) [0x00007FF6DAAB443F]
+	(No symbol) [0x00007FF6DAAB3CD1]
+	(No symbol) [0x00007FF6DAAB3C10]
+	(No symbol) [0x00007FF6DAAB1ACF]
+	(No symbol) [0x00007FF6DAAB214C]
+	(No symbol) [0x00007FF6DAACE241]
+	(No symbol) [0x00007FF6DAB673CE]
+	(No symbol) [0x00007FF6DAB466EA]
+	(No symbol) [0x00007FF6DAB665A2]
+	(No symbol) [0x00007FF6DAB46493]
+	(No symbol) [0x00007FF6DAB109D1]
+	(No symbol) [0x00007FF6DAB11B31]
+	GetHandleVerifier [0x00007FF6DAFB871D+3302573]
+	GetHandleVerifier [0x00007FF6DB004243+3612627]
+	GetHandleVerifier [0x00007FF6DAFFA417+3572135]
+	GetHandleVerifier [0x00007FF6DAD55EB6+801862]
+	(No symbol) [0x00007FF6DAC1945F]
+	(No symbol) [0x00007FF6DAC14FB4]
+	(No symbol) [0x00007FF6DAC15140]
+	(No symbol) [0x00007FF6DAC0461F]
+	BaseThreadInitThunk [0x00007FFDD763257D+29]
+	RtlUserThreadStart [0x00007FFDD834AF28+40]
+</status>
+</test>
+<status status="FAIL" starttime="20240919 16:25:26.273" endtime="20240919 16:25:34.410"/>
+</suite>
+<status status="FAIL" starttime="20240919 16:25:26.224" endtime="20240919 16:25:34.412"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">656121</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="Web Functionality">Tests.Web Functionality</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240919 16:25:28.270" level="WARN">There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache</msg>
+</errors>
+</robot>

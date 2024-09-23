@@ -1,0 +1,76 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.Web Functionality Copy                                                  
+==============================================================================
+Example Test                                                            
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Local\TestAutomationAgent\libs\robotframework\templates\default\tests\web_functionality copy.robot:25
+    T:  Example Test    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Local\TestAutomationAgent\libs\robotframework\templates\default\tests\web_functionality copy.robot:31
+      fill login form    user    password
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Local\TestAutomationAgent\libs\robotframework\templates\default\resources\loginPage\actions.robot:8
+      Input Text    ${username_field_locator}    ${username}
+      |  ${username_field_locator} = id=username (str)
+      |  ${username} = user (str)
+______________________________________________________________________________
+| FAIL |
+No browser is open.
+------------------------------------------------------------------------------
+Example Test 2                                                          
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Local\TestAutomationAgent\libs\robotframework\templates\default\tests\web_functionality copy.robot:35
+    T:  Example Test 2    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Local\TestAutomationAgent\libs\robotframework\templates\default\tests\web_functionality copy.robot:36
+      '${ENVIRONMENT}' == 'dev'    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Local\TestAutomationAgent\libs\robotframework\templates\default\tests\web_functionality copy.robot:38
+      Open Browser    ${dev.base_url}    ${dev.browser}
+      |  ${dev.base_url} = https://google.com (str)
+      |  ${dev.browser} = chrome (str)
+______________________________________________________________________________
+| FAIL |
+WebDriverException: Message: unknown error: net::ERR_PROXY_CONNECTION_FAILED
+  (Session info: chrome=128.0.6613.138)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DAC99412+29090]
+	(No symbol) [0x00007FF6DAC0E239]
+	(No symbol) [0x00007FF6DAACB1DA]
+	(No symbol) [0x00007FF6DAAC3214]
+	(No symbol) [0x00007FF6DAAB4179]
+	(No symbol) [0x00007FF6DAAB5F42]
+	(No symbol) [0x00007FF6DAAB443F]
+	(No symbol) [0x00007FF6DAAB3CD1]
+	(No symbol) [0x00007FF6DAAB3C10]
+	(No symbol) [0x00007FF6DAAB1ACF]
+	(No symbol) [0x00007FF6DAAB214C]
+	(No symbol) [0x00007FF6DAACE241]
+	(No symbol) [0x00007FF6DAB673CE]
+	(No symbol) [0x00007FF6DAB466EA]
+	(No symbol) [0x00007FF6DAB665A2]
+	(No symbol) [0x00007FF6DAB46493]
+	(No symbol) [0x00007FF6DAB109D1]
+	(No symbol) [0x00007FF6DAB11B31]
+	GetHandleVerifier [0x00007FF6DAFB871D+3302573]
+	GetHandleVerifier [0x00007FF6DB004243+3612627]
+	GetHandleVerifier [0x00007FF6DAFFA417+3572135]
+	GetHandleVerifier [0x00007FF6DAD55EB6+801862]
+	(No symbol) [0x00007FF6DAC1945F]
+	(No symbol) [0x00007FF6DAC14FB4]
+	(No symbol) [0x00007FF6DAC15140]
+	(No symbol) [0x00007FF6DAC0461F]
+	BaseThreadInitThunk [0x00007FFDD763257D+29]
+	RtlUserThreadStart [0x00007FFDD834AF28+40]
+------------------------------------------------------------------------------
+Tests.Web Functionality Copy                                          | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Tests                                                                 | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Output:  C:\Local\TestAutomationAgent\libs\robotframework\templates\default\pabot_results\2\output.xml
