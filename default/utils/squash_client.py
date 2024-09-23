@@ -11,7 +11,7 @@ import os
 
 URL_GAMERA_API = "https://gamera.serv.cdc.fr/squash/api/rest/latest/"
 
-class Gamera:
+class Squash:
     ROBOT_LISTENER_API_VERSION = 3  # Defines the Robot Framework listener API version
 
     def __init__(self, id_campaign, username,password):

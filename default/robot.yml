@@ -1,24 +1,17 @@
-# Configuration générale pour l'exécution des tests RobotFramework
+squash:
+  campaign: 12457 # ID de la campagne Squash à utiliser
+  username: xxx
+  password: xxx
 
-# Options globales pour l'exécution des tests Gamera
-gamera:
-  campaign: 24526
-  username: usine_test_auto
-  password: usine_test_auto
 
-# Options globales pour l'exécution des tests
 robot:
-  # Répertoires contenant les suites de tests à exécuter
   suites: 
     - tests/
 
-  # Niveau de sortie : DEBUG, INFO, WARN, TRACE, NONE
   logLevel: INFO
 
-  # Dossier où les rapports et journaux seront générés
   outputDir: results/
 
-  # Format des fichiers de sortie
   output: output.xml
   report: report.html
   log: log.html
@@ -39,22 +32,16 @@ robot:
   # exclude: 
   #   - non_critical
 
-# Configuration pour l'exécution parallèle avec Pabot
+
 pabot:
-  # Nombre de threads parallèles à utiliser pour l'exécution
   processes: 4
-  
-  # Options Pabot : exécuter les suites de manière isolée
   options:
     - --verbose
     # - --listener libraries/custom_listener.py  # Ajout du listener Python personnalisé
 
 
-# Post-exécution : Actions après la fin des tests
-# postExecution:
+#TODO postExecution:
 #   - name: "Envoyer le rapport par email"
 #     command: "python send_report.py --file results/report.html --to team@example.com"
 
-#   - name: "Supprimer les fichiers temporaires"
-#     command: "rm -rf /tmp/robotframework-temp"
 

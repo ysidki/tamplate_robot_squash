@@ -21,7 +21,7 @@ ${ENVIRONMENT}     dev  # Valeur par défaut
 
 *** Test Cases ***                      
 Test_Import_Lib
-    [Tags]   656118   Gamera
+    [Tags]   xxx   xxx
     [Documentation]    Ceci est un exemple de test utilisant les variables d'environnement
     LaptopActionsLibrary.Press Key    tab
     LaptopActionsLibrary.Hold And Press Key       Ctrl      tab
